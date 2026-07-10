@@ -73,7 +73,7 @@ python app.py
 ### 5. Open in your browser
 
 ```
-http://127.0.0.1:5000
+[http://127.0.0.1:5000](https://attendwise-2.onrender.com/)
 ```
 
 ---
