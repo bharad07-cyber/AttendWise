@@ -1,21 +1,41 @@
 # 🎓 AttendWise
 
-AttendWise is a simple and user-friendly web application built using **Python Flask** that helps college students calculate their attendance percentage and determine whether they can skip classes or need to attend more classes to achieve the required attendance criteria.
+AttendWise is a Flask-based web application that helps college students calculate their attendance percentage and determine how many classes they can safely skip or need to attend to meet the required attendance criteria. The application provides instant attendance analysis through a simple and responsive interface.
+
+---
+
+## 🌐 Live Demo
+
+🔗 **https://attendwise-2.onrender.com/**
 
 ---
 
 ## ✨ Features
 
 - 📊 Calculate attendance percentage instantly
-- 📚 Predict how many classes need to be attended
-- 😎 Calculate how many classes can be skipped safely
-- 📅 Supports future holiday adjustment
-- 🎨 Clean and responsive user interface
-- ⚡ Fast and lightweight Flask application
+- 📅 Adjust calculations based on future holidays
+- ✅ Predict how many classes can be skipped
+- 📚 Calculate the number of classes required to reach the target attendance
+- 🚦 Attendance status indicator (Excellent, Safe, Warning, Critical)
+- 💻 Responsive and user-friendly interface
 
 ---
 
-## 🛠️ Technologies Used
+## 📸 Preview
+
+- Enter the number of classes attended.
+- Enter the total number of classes.
+- Add future holidays (optional).
+- Click **Calculate Attendance**.
+- Instantly view:
+  - Attendance Percentage
+  - Attendance Status
+  - Classes You Can Skip
+  - Classes You Need to Attend
+
+---
+
+## 🛠️ Built With
 
 - Python
 - Flask
@@ -25,9 +45,9 @@ AttendWise is a simple and user-friendly web application built using **Python Fl
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
-```
+```text
 AttendWise/
 │
 ├── app.py
@@ -46,63 +66,47 @@ AttendWise/
 
 ## 🚀 Installation
 
-### 1. Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/bharad07-cyber/AttendWise.git
 ```
 
-### 2. Open the project folder
+### Navigate to the project
 
 ```bash
 cd AttendWise
 ```
 
-### 3. Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the application
+### Run the application
 
 ```bash
 python app.py
 ```
 
-### 5. Open in your browser
+### Open your browser
 
 ```
-https://attendwise-2.onrender.com/
+http://127.0.0.1:5000
 ```
 
 ---
 
-## 📸 Preview
+## 📈 Future Enhancements
 
-Enter:
-
-- Classes Attended
-- Total Classes
-- Future Holidays
-
-Click **Calculate Attendance** to view:
-
-- ✅ Attendance Percentage
-- ✅ Attendance Status
-- ✅ Classes You Can Skip
-- ✅ Classes You Need to Attend
-
----
-
-## 🎯 Future Improvements
-
-- 🌙 Dark Mode
-- 📈 Attendance Charts
-- 📄 PDF Report Download
-- 🔔 Attendance Reminder Notifications
-- 💾 Attendance History
+- 📊 Attendance charts and analytics
+- 📄 PDF attendance report
+- 💾 Attendance history
+- 🌙 Dark mode
 - 📱 Progressive Web App (PWA)
+- 🔔 Attendance reminder notifications
+- 🎯 Custom attendance target selection
 
 ---
 
@@ -110,12 +114,14 @@ Click **Calculate Attendance** to view:
 
 **Bharad**
 
-GitHub: https://github.com/bharad07-cyber
+GitHub: **https://github.com/bharad07-cyber**
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
-Feel free to use, modify, and improve it for learning purposes.
+---
+
+⭐ If you found this project useful, consider giving it a **Star** on GitHub!
