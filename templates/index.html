@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttendWise - Attendance Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🎓 AttendWise</h1>
+
+        <p class="subtitle">
+            Smart College Attendance Predictor
+        </p>
+
+        <form method="POST">
+
+            <div class="input-box">
+                <label for="attended">Classes Attended</label>
+                <input
+                    type="number"
+                    id="attended"
+                    name="attended"
+                    placeholder="Enter attended classes"
+                    required
+                    min="0">
+            </div>
+
+            <div class="input-box">
+                <label for="total">Total Classes</label>
+                <input
+                    type="number"
+                    id="total"
+                    name="total"
+                    placeholder="Enter total classes"
+                    required
+                    min="1">
+            </div>
+
+            <div class="input-box">
+                <label for="holidays">Future Holidays</label>
+                <input
+                    type="number"
+                    id="holidays"
+                    name="holidays"
+                    placeholder="Future holidays"
+                    value="0"
+                    min="0">
+            </div>
+
+            <button type="submit">
+                Calculate Attendance
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result %}
+
+    <div class="result-card">
+
+        <h2>Your Result</h2>
+
+        <div class="circle">
+            {{ result.percentage }}%
+        </div>
+
+        <h3 style="color: {{ result.color }}";>
+            {{ result.status }}
+        </h3>
+
+        <div class="stats">
+
+            <div class="box">
+                <h4>Attendance</h4>
+                <p>{{ result.percentage }}%</p>
+            </div>
+
+            <div class="box">
+                <h4>Can Skip</h4>
+                <p>{{ result.skip }} Classes</p>
+            </div>
+
+            <div class="box">
+                <h4>Need To Attend</h4>
+                <p>{{ result.need }} Classes</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
